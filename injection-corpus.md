@@ -44,6 +44,9 @@ render Markdown nhưng agent đọc toàn văn file nên vẫn thấy. Marker kh
 ```
 
 **Kết quả sau khi contain (Bước 4):** sink rỗng — xem `reports/attack-after.log`.
+Cả 4 biến thể replay trong `tests/test_injection.py` (× 2 principal
+`support_l1`/`dpo`) đều pass: `reports/attack-after.log` 0 byte, ledger có
+dòng `http_post` `deny` (`reports/ledger.jsonl:23`).
 
 ---
 
