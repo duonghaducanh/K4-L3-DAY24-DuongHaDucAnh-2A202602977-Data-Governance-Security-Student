@@ -1,0 +1,9 @@
+# Supply-chain checkpoint (Bước 4): quét secret bằng hook chính thức.
+# `gitleaks-system` dùng binary gitleaks đã cài trên máy (không build Go),
+# nên hook cần pass_filenames: false — `gitleaks git` chỉ nhận 1 repo path.
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks-system
+        pass_filenames: false
